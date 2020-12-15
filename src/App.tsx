@@ -27,9 +27,14 @@ function App() {
     <div className="w-screen h-screen">
       <div className="w-full h-14 bg-black">bala</div>
       <div className="w-full flex">
+        <div className="w-1/2 flex flex-col justify-center items-center">
+          <div className="w-64 h-64 bg-white rounded-lg shadow-xl">
+            hola
+          </div>
+        </div>
         <div ref={ref} className="w-1/2">
           <MonacoEditor
-            width={size.height}
+            width={size.width}
             height={size.height}
             language="javascript"
             theme="vs-dark"
@@ -38,11 +43,6 @@ function App() {
             onChange={onChange}
             editorDidMount={editorDidMount}
           />
-        </div>
-        <div className="w-1/2 flex flex-col justify-center items-center">
-          <div className="w-64 h-64 bg-white rounded-lg shadow-xl">
-            hola
-          </div>
         </div>
       </div>
     </div>
