@@ -1,8 +1,7 @@
 {
   "name": "geek-resume",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://turkyden.com/geek-resume/",
+  "private": false,
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.1",
     "@testing-library/jest-dom": "^5.11.4",
