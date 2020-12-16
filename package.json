@@ -2,6 +2,7 @@
   "name": "geek-resume",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://turkyden.com/geek-resume/",
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.1",
     "@testing-library/jest-dom": "^5.11.4",
@@ -14,6 +15,7 @@
     "ahooks": "^2.9.2",
     "autoprefixer": "9",
     "craco": "^0.0.3",
+    "gh-pages": "^3.1.0",
     "github-markdown-css": "^4.0.0",
     "postcss": "7",
     "react": "^17.0.1",
@@ -27,6 +29,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b gh-pages -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
