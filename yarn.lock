@@ -3687,8 +3687,8 @@ cosmiconfig@^7.0.0:
 
 craco@^0.0.3:
   version "0.0.3"
-  resolved "https://registry.npm.taobao.org/craco/download/craco-0.0.3.tgz#1e464b0ae5d9176570382d3a3fcdbf3599577012"
-  integrity sha1-HkZLCuXZF2VwOC06P82/NZlXcBI=
+  resolved "https://registry.npmjs.org/craco/-/craco-0.0.3.tgz#1e464b0ae5d9176570382d3a3fcdbf3599577012"
+  integrity sha512-eeibbwJm1CTf/j3xvNgNmsRS7abegp4Cfm5qtn5nE9/0JjZRas+FHj8IlT8FMFWR0XOyZFGcWZgzaTU19DNGoQ==
   dependencies:
     "@babel/core" "^7.6.0"
     "@craco/craco" "^5.5.0"
