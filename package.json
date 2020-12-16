@@ -13,6 +13,7 @@
     "@types/react-dom": "^16.9.8",
     "ahooks": "^2.9.2",
     "autoprefixer": "^10.1.0",
+    "eslint": "^7.15.0",
     "github-markdown-css": "^4.0.0",
     "postcss": "^8.2.1",
     "react": "^17.0.1",
