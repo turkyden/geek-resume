@@ -29,7 +29,7 @@ function App() {
     <div ref={ref} className="w-screen h-screen">
       <SplitPane split="horizontal" allowResize={false}>
         <div className="w-full bg-black h-12 flex justify-between items-center px-4">
-          <a className="text-white text-lg" href="#" target="_blank" >Geek Resume</a>
+          <a className="text-white text-lg" href="https://www.baidu.com" target="_blank" >Geek Resume</a>
           <ul className="w-64 flex justify-between">
             <li className="">linkin / Boss / </li>
             <li className="">Export as PDF / PNG / Markdown</li>
