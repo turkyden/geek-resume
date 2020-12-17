@@ -2,6 +2,7 @@
   "name": "geek-resume",
   "version": "0.1.0",
   "private": false,
+  "homepage": "http://turkyden.com/geek-resume",
   "dependencies": {
     "@craco/craco": "^6.0.0",
     "@tailwindcss/postcss7-compat": "^2.0.1",
