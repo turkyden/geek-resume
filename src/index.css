@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 @import '../node_modules/github-markdown-css/github-markdown.css';
+
+.markdown-body ol, .markdown-body ul {
+  list-style-type: disc;
+}
