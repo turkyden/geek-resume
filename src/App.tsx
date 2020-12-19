@@ -6,7 +6,6 @@ import ReactMarkdown from 'react-markdown';
 import * as monaco from "monaco-editor/esm/vs/editor/editor.api";
 import './A4.css';
 import resume_cn from './resume_cn';
-import resume_us from './resume_us';
 import svg_cn from './cn.svg';
 import svg_us from './us.svg'
 
@@ -49,11 +48,11 @@ function App() {
           <div className="w-full bg-black h-12 flex justify-between items-center px-4">
             <ul className="flex items-center text-white h-full">
               <li className="px-4 h-full flex items-center cursor-pointer border-0 border-b-2 border-green-300">
-                <img className="w-6" src={svg_cn} />
+                <img className="w-6" src={svg_cn} alt="zh-cn" />
                 <span className="pl-4 text-sm">中文</span>
               </li>
               <li className="px-4 h-full flex items-center cursor-pointer border-0 border-green-300">
-                <img className="w-6" src={svg_us} />
+                <img className="w-6" src={svg_us} alt="us" />
                 <span className="pl-4 text-sm">English</span>
               </li>
             </ul>

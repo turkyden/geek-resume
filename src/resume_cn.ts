@@ -1,4 +1,4 @@
-export default `
+const RESUME_CN = `
 # Hello, *world*!
 
 - ddd
@@ -21,3 +21,5 @@ export default `
 | ---- | ---- |
 | xsdsds | kcldfkld |
 `
+
+export default RESUME_CN
