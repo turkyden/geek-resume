@@ -24,7 +24,6 @@ body {
   font-size: 12pt;
   margin: 2em auto;
   padding: calc(var(--bleeding) + var(--margin));
-  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
   background: white;
 }
 
@@ -37,9 +36,8 @@ body {
     width: calc(100% - var(--bleeding) * 2);
     height: calc(100% - var(--bleeding) * 2);
     margin: var(--bleeding);
-    outline: thin dashed black;
+    outline: thin dashed#D1D5DB;
     pointer-events: none;
-    z-index: 9999;
   }
 }
 
