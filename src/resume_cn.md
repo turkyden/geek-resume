@@ -1,4 +1,3 @@
-const RESUME_CN = `
 ## 前端开发工程师
 
 <div style="position: relative;">
@@ -57,6 +56,3 @@ const RESUME_CN = `
 `2013.07 ~ 2015.09` 中国人民解放军陆军第 31 集团军 / 副班长兼文书
 
 任职期间除了军事训练，兼任师部信管文书，负责集团军官网简单开发与 CMS 维护，展示军队风采。
-`
-
-export default RESUME_CN
