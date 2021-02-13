@@ -6,8 +6,8 @@ import ReactMarkdownWithHtml from 'react-markdown/with-html';
 import gfm from 'remark-gfm';
 import * as monaco from "monaco-editor/esm/vs/editor/editor.api";
 import './A4.css';
-import resume_cn from './resume_cn';
-import resume_us from './resume_us';
+import resume_cn from './resume_cn.md';
+import resume_us from './resume_us.md';
 import svg_cn from './cn.svg';
 import svg_us from './us.svg'
 
