@@ -8,7 +8,23 @@ module.exports = {
         languages: ["json", "javascript", "typescript", 'markdown'],
       })
     ],
-    configure: { /* Any webpack configuration options: https://webpack.js.org/configuration */ },
+    configure: {
+      module: {
+        rules: [
+          {
+            test: /\.md$/i,
+            use: [
+              {
+                loader: 'raw-loader',
+                options: {
+                  esModule: false,
+                },
+              },
+            ],
+          },
+        ],
+      },
+    },
     configure: (webpackConfig, { env, paths }) => webpackConfig
   },
   style: {
