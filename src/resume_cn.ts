@@ -3,7 +3,7 @@ const RESUME_CN = `
 
 <div style="position: relative;">
  <img style="border-radius: 100%; padding-left: 0px;" src="https://avatars0.githubusercontent.com/u/24560160?s=460&u=36a6072b8220e6ad7c0c7f7dbf97cc3dd796a8d0&v=4" width="160" height="160" alt="avatar" align="right">
- <span style="position: absolute; bottom: -160px; right: 0; background: #fff; border-radius: 100%; padding: 8px; font-size: 12px">{ ...🧡 }</span>
+ <span style="display: none; position: absolute; bottom: -160px; right: 0; background: #fff; border-radius: 100%; padding: 8px; font-size: 12px">{ ...🧡 }</span>
 </div>
 
 [![GitHub User's stars](https://img.shields.io/github/stars/turkyden?style=social)](https://github.com/Turkyden)
@@ -38,17 +38,17 @@ const RESUME_CN = `
 
 <code>2011.09 ~ 2017.07</code> 上海第二工业大学 / 电子商务应用技术 / 工学学士 / 全日制
 
-主修计算机网络通识课程以及 J2EE 等电子商务开发技术，有 Java Web 服务端编程经验
+主修计算机网络通识课程以及 J2EE 等电子商务开发技术，了解 Java Web 服务端编程
 
 ### 工作履历
 
 <code>2018.09 ~ 2021.03</code> 上海泛微网络股份有限公司 / 主板上市 / 开发工程师 
 
-任职期间主要负责企业级 OA 协同办公软件 SaaS 云平台的建设，以及可视化编辑器的研发。
+任职期间主要负责企业级 OA 协同办公软件 SaaS 云平台的建设，以及可视化编辑平台的研发。
 
 **ECode 无侵入二次开发框架**：为了解决 SaaS 产品交付实施成本过高与客户难以定制化的问题，我提出使用 React.forward 组件代理的方式改造标准 UI 组件，并编写 MiddleWare SDK，赋能 SaaS 标准产品的无侵入二次开发，为后续的可视化编辑的落地打下基础。作为核心成员，我还负责该框架在企业内部的推广和技术培训，最终根据交付实施部门统计，定制化二次开发的成本下降了 40% 左右。
 
-**EDesign 低代码开发平台**：是我参与的复杂度较高的项目之一，Low Code Platform 是今年公司主推的 SaaS 产品新特性，目的是使得软件产品交付使用之后，客户可以根据实际的需求搭建和修改前端页面，通过牺牲代码的灵活性来换取垂直业务领域的研发效能提升。我主要负责自定义 React Hooks 的开发与可视化配置面板 UI 组件的设计。
+**EDesign 低代码开发平台**：是我参与的复杂度较高的项目之一，Low Code Platform 是今年公司主推的 SaaS 产品新特性，目的是使得软件产品交付使用之后，客户可以根据实际的需求搭建和修改前端页面，通过牺牲代码的灵活性来换取垂直业务领域的研发效能提升。我主要负责自定义 React Hooks 的开发与可视化配置面板 UI 组件的设计。（React + Mobx + Typescript + Webpack）
 
 <code>2017.07 ~ 2018.09</code> 联和金融集团有限公司 / 开发工程师
 
