@@ -50,7 +50,7 @@ function App() {
       <SplitPane split="vertical" onChange={onSplitChange} >
         <div className="w-full h-full bg-gray-100">
           <div className="w-full bg-purple-700 h-12 flex justify-center items-center px-4">
-            <a className="text-white text-lg no-underline" href="https://www.baidu.com" target="_blank" rel="noreferrer">Geek Resume</a>
+            <a className="text-white text-lg no-underline" href="https://github.com/Turkyden/geek-resume" target="_blank" rel="noreferrer">Geek Resume</a>
           </div>
           <div className="flex justify-center overflow-scroll" style={{ height: 'calc(100% - 48px)' }}>
             <div className="A4Wrapper">
