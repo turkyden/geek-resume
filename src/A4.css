@@ -19,7 +19,7 @@ body {
 .A4 {
   display: inline-block;
   position: relative;
-  height: 297mm;
+  /* height: 297mm; */
   width: 210mm;
   font-size: 12pt;
   margin: 2em auto;

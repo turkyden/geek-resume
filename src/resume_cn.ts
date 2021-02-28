@@ -11,7 +11,7 @@ const RESUME_CN = `
 [![Linkedin](https://img.shields.io/badge/-Dengju%20Deng-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/dengju-deng-8707b7a5/)](https://www.linkedin.com/in/alexey-khachatryan-8707b7a5/)
 [![Mail](https://img.shields.io/badge/-wj871287@gmail.com-gray?style=flat-square&logo=gmail&logoColor=red&link=)](mailto:wj871287@gmail.com)
 
-你好，我是邓登举，一个专注于人机交互与体验技术的 Web 开发者，[alibaba/hooks](https://github.com/alibaba/hooks) 核心维护者，开源爱好者，退役军人。
+你好，我是邓登举，一个专注于人机交互与体验技术的 React 开发者，[alibaba/hooks](https://github.com/alibaba/hooks) 核心维护者，开源爱好者，退役军人。
 
 <!-- My social links -->
 <code><img height="20" alt="github" src="https://camo.githubusercontent.com/b079fe922f00c4b86f1b724fbc2e8141c468794ce8adbc9b7456e5e1ad09c622/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6769746875622e737667"></code>
@@ -52,11 +52,51 @@ const RESUME_CN = `
 
 <code>2017.07 ~ 2018.09</code> 联和金融集团有限公司 / 开发工程师
 
-任职期间主要负责 React UI 组件库的开发与文档维护工作，因为在初级版本的 AntD v1.0 中无法实现黑夜模式，而且一些特殊的 UI 组件无法支撑 CNABS 资产证券化中后台业务的 UI 设计需求，我基于 Stroybook 重新封装 rc-components 实现了一套平行于 AntD 的企业级组件库。不仅满足了团队业务开发的需要，而且还使得公司的设计资产能够以技术的方式沉淀下来。
+**Hey UI 组件库**：任职期间主要负责 React UI 组件库的开发与文档维护工作，因为在初级版本的 AntD v1.0 中无法实现黑夜模式，而且一些特殊的 UI 组件无法支撑 CNABS 资产证券化中后台业务的 UI 设计需求，我基于 Stroybook 重新封装 rc-components 实现了一套平行于 AntD 的企业级组件库。不仅满足了团队业务开发的需要，而且还使得公司的设计资产能够以技术的方式沉淀下来。
 
 <code>2013.07 ~ 2015.09</code> 中国人民解放军陆军第 31 集团军 / 副班长兼文书
 
 任职期间除了军事训练，兼任师部信管文书，负责集团军官网简单开发与 CMS 维护，展示军队风采。
+
+<br/>
+
+### 开源项目
+
+<div style="display: flex;">
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=turkyden&repo=react-darkreader" />
+  </a>
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=turkyden&repo=vue-typical" />
+  </a>
+</div>
+<div style="display: flex;">
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=turkyden&repo=image-hover" />
+  </a>
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=turkyden&repo=use-vuejs" />
+  </a>
+</div>
+<div style="display: flex;">
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=turkyden&repo=geek-resume" />
+  </a>
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats" />
+  </a>
+</div>
+
+### 贡献量
+
+<div style="display: flex;">
+  <a style="width: 50%" href="https://github.com/anuraghazra/github-readme-stats">
+    <img width="100%" align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=turkyden&hide=html&langs_count=5&layout=compact" />
+  </a>
+  <a style="width: 50%" href="https://github.com/anuraghazra/github-readme-stats">
+    <img width="100%" align="center" src="https://github-readme-stats.vercel.app/api?username=turkyden&show_icons=true" />
+  </a>
+</div>
 `
 
 export default RESUME_CN
