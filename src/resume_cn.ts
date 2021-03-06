@@ -63,38 +63,36 @@ const RESUME_CN = `
 ### 开源项目
 
 <div style="display: flex;">
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=turkyden&repo=react-darkreader" />
+  <a style="width: 50%" href="https://github.com/anuraghazra/github-readme-stats">
+    <img width="100%" align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=turkyden&hide=html&langs_count=5&layout=compact&hide_border=true" />
   </a>
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=turkyden&repo=vue-typical" />
-  </a>
-</div>
-<div style="display: flex;">
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=turkyden&repo=image-hover" />
-  </a>
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=turkyden&repo=use-vuejs" />
-  </a>
-</div>
-<div style="display: flex;">
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=turkyden&repo=geek-resume" />
-  </a>
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats" />
+  <a style="width: 50%" href="https://github.com/anuraghazra/github-readme-stats">
+    <img width="100%" align="center" src="https://github-readme-stats.vercel.app/api?username=turkyden&show_icons=true&hide_border=true" />
   </a>
 </div>
 
-### 贡献量
-
 <div style="display: flex;">
-  <a style="width: 50%" href="https://github.com/anuraghazra/github-readme-stats">
-    <img width="100%" align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=turkyden&hide=html&langs_count=5&layout=compact" />
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=turkyden&repo=react-darkreader&hide_border=true" />
   </a>
-  <a style="width: 50%" href="https://github.com/anuraghazra/github-readme-stats">
-    <img width="100%" align="center" src="https://github-readme-stats.vercel.app/api?username=turkyden&show_icons=true" />
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=turkyden&repo=vue-typical&hide_border=true" />
+  </a>
+</div>
+<div style="display: flex;">
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=turkyden&repo=image-hover&hide_border=true" />
+  </a>
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=turkyden&repo=use-vuejs&hide_border=true" />
+  </a>
+</div>
+<div style="display: flex;">
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=turkyden&repo=geek-resume&hide_border=true" />
+  </a>
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats&hide_border=true" />
   </a>
 </div>
 `
