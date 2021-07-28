@@ -1,8 +1,8 @@
 const RESUME_CN = `
-## 软件开发工程师
+## 前端开发工程师
 
 <div style="position: relative;">
- <img style="border-radius: 100%; padding-left: 0px;" src="https://avatars.githubusercontent.com/u/9020979?v=4" width="160" height="160" alt="avatar" align="right">
+ <img style="border-radius: 100%; padding-left: 0px;" src="https://avatars0.githubusercontent.com/u/24560160?s=460&u=36a6072b8220e6ad7c0c7f7dbf97cc3dd796a8d0&v=4" width="160" height="160" alt="avatar" align="right">
  <span style="display: none; position: absolute; bottom: -160px; right: 0; background: #fff; border-radius: 100%; padding: 8px; font-size: 12px">{ ...🧡 }</span>
 </div>
 
@@ -11,7 +11,7 @@ const RESUME_CN = `
 [![Mail](https://img.shields.io/badge/-wj871287@gmail.com-gray?style=flat-square&logo=gmail&logoColor=red&link=)](mailto:wj871287@gmail.com)
 [![Wechat](https://img.shields.io/badge/-15026579658-07c160?style=flat-square&logo=Wechat&logoColor=white&link=https://www.linkedin.com/in/dengju-deng-8707b7a5/)](https://www.linkedin.com/in/alexey-khachatryan-8707b7a5/)
 
-你好，我是王宝山，一个专注于人机交互与体验技术的 React 开发者，擅长于低代码可视化搭建平台解决方案，Github 开源爱好者。
+你好，我是邓登举，一个专注于人机交互与体验技术的 React 开发者，擅长于低代码可视化搭建平台解决方案，Github 开源爱好者，退役军人。
 
 <!-- My social links -->
 <code><a href="https://github.com/Turkyden" target="_blank"><img height="20" alt="github" src="https://camo.githubusercontent.com/b079fe922f00c4b86f1b724fbc2e8141c468794ce8adbc9b7456e5e1ad09c622/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6769746875622e737667"></a></code>
@@ -43,7 +43,7 @@ const RESUME_CN = `
 
 ### 工作履历
 
-**<code>2018.09 ~ 2021.05</code>** 上海 XX 网络股份有限公司 / 主板上市 / 资深开发工程师 
+**<code>2018.09 ~ 2021.05</code>** 上海泛微网络股份有限公司 / 主板上市 / 资深开发工程师 
 
 任职期间主要负责：OA 协同办公软件产品研发，企业级中后台低代码物料素材中心的建设。
 
@@ -55,7 +55,7 @@ const RESUME_CN = `
 
 Low Code 低代码搭建是今年软件行业的潮流，也是公司今年主推的 SaaS 产品新特性，其本质是为了实现跨专业领域的赋能，解决前端研发资源投入不足的问题。我主要负责编辑器基座、智能网格画布、可视化配置面板的研发，后期转向物料素材中心的建设。截止至目前，已实现低代码物料素材流通数 500+，流转次数 2000+，降本约合 1300 人/天。(技术栈：Umi + Formily + AntdV)
 
-**<code>2017.07 ~ 2018.09</code>** 上海 xx 金融信息服务有限公司 / 开发工程师
+**<code>2017.07 ~ 2018.09</code>** 联和金融集团有限公司 / 开发工程师
 
 任职期间主要负责 Hey UI 组件库的开发与文档维护工作。早期的 AntD v1.0 版本中无法实现黑夜模式，该组件库无法支撑 CNABS 资产证券化中后台业务特定场景下的 UI 设计需求，我基于 Stroybook 重新封装 rc-components 实现了一套平行于 AntD 的企业级组件库。不仅满足了团队业务开发的需要，而且还使得公司的设计资产能够以技术文档的方式沉淀下来。
 
