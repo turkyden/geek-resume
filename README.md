@@ -5,7 +5,7 @@
 [![GitHub User's stars](https://img.shields.io/github/stars/visiky?style=social)](https://github.com/visiky)
 [![Github](https://img.shields.io/github/followers/visiky?label=Follow&style=social)](https://github.com/visiky)
 [![Mail](https://img.shields.io/badge/-736929286@qq.com-gray?style=flat-square&logo=gmail&logoColor=red&link=)](mailto:736929286@qq.com)
-[![Wechat](https://img.shields.io/badge/-15625057119-07c160?style=flat-square&logo=Wechat&logoColor=white&link=https://www.linkedin.com/in/dengju-deng-8707b7a5/)](https://www.linkedin.com/in/alexey-khachatryan-8707b7a5/)
+[![Wechat](https://img.shields.io/badge/-15625057119-07c160?style=flat-square&logo=Wechat&logoColor=white)](https://www.linkedin.com/in/alexey-khachatryan-8707b7a5/)
 
 你好，我是廖晓娟，一个自驱型前端工程师，三年多大型复杂产品开发经验，负责蚂蚁集团 BI 产品 DeepInsight 的可视化建设，参与了从图表库到 BI 产品力的一体化建设，对商业智能领域的数据可视化建设有较为丰富的经验。
 

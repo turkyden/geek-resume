@@ -24,26 +24,26 @@ import "pattern.css/dist/pattern.css";
 function MySplit({ direction, children }) {
   useEffect(() => {
     if (direction === "vertical") {
-      document.querySelector(".monaco-view").style.height = "calc(50% - 5px)";
-      document.querySelector(".monaco-view").style.width = "auto";
-      document.querySelector(".monaco-editor").style.height = "calc(50% - 5px)";
-      document.querySelector(".monaco-editor").style.width = "auto";
+      document.querySelector(".monaco-view").style.height = "calc(60% - 5px)";
+      document.querySelector(".monaco-view").style.width = "100%";
+      document.querySelector(".monaco-editor").style.height = "calc(40% - 5px)";
+      document.querySelector(".monaco-editor").style.width = "100%";
       if (!document.querySelector(".gutter")) return;
       document
         .querySelector(".gutter")
         .classList.replace("gutter-horizontal", "gutter-vertical");
       document.querySelector(".gutter").style.height = "10px";
-      document.querySelector(".gutter").style.width = "auto";
+      document.querySelector(".gutter").style.width = "100%";
     } else if (direction === "horizontal") {
-      document.querySelector(".monaco-view").style.width = "calc(50% - 5px)";
-      document.querySelector(".monaco-view").style.height = "auto";
-      document.querySelector(".monaco-editor").style.height = "calc(50% - 5px)";
-      document.querySelector(".monaco-editor").style.height = "auto";
+      document.querySelector(".monaco-view").style.width = "calc(60% - 5px)";
+      document.querySelector(".monaco-view").style.height = "100%";
+      document.querySelector(".monaco-editor").style.height = "calc(40% - 5px)";
+      document.querySelector(".monaco-editor").style.height = "100%";
       if (!document.querySelector(".gutter")) return;
       document
         .querySelector(".gutter")
         .classList.replace("gutter-vertical", "gutter-horizontal");
-      document.querySelector(".gutter").style.height = "auto";
+      document.querySelector(".gutter").style.height = "100%";
       document.querySelector(".gutter").style.width = "10px";
     } else {
     }
@@ -51,7 +51,12 @@ function MySplit({ direction, children }) {
 
   if (direction === "vertical") {
     return (
-      <Split className="w-full h-full pt-12" direction="vertical" minSize={0}>
+      <Split
+        className="w-full h-full pt-12"
+        direction="vertical"
+        minSize={0}
+        sizes={[60, 40]}
+      >
         {children}
       </Split>
     );
@@ -62,6 +67,7 @@ function MySplit({ direction, children }) {
         className="w-full h-full pt-12 flex"
         direction="horizontal"
         minSize={0}
+        sizes={[60, 40]}
       >
         {children}
       </Split>
@@ -84,34 +90,67 @@ export default function IndexPage() {
   const print = (e: Event) => {
     if (donation !== "1") {
       Modal.info({
-        title: "🎉 有你支持，我们会做的更好！",
+        title: (
+          <span>
+            MD Resume is made with heart by{" "}
+            <a
+              className="underline"
+              target="_blank"
+              href="https://github.com/Turkyden"
+            >
+              @Turkyden
+            </a>
+          </span>
+        ),
         icon: null,
+        maskClosable: true,
+        centered: true,
+        okText: "OK",
         content: (
-          <div className="">
-            <div className="pt-6"># 方式 1</div>
-            <div className="px-4 text-gray-500 py-2 flex items-center contents-center">
-              <a
-                href="https://github.com/Turkyden/handsome-elements"
-                target="_blank"
-              >
-                <img
-                  className=""
-                  alt="GitHub Repo stars"
-                  src="https://img.shields.io/github/stars/Turkyden/handsome-elements?style=social"
-                />
-              </a>
-              <div className="pl-4">帮忙点个 Star ⭐</div>
+          <div>
+            <p className="text-center">Glad it helps!</p>
+            <p className="text-center">A few ways to say thank you 👇</p>
+            <div className="space-y-6">
+              <div className="transform hover:scale-105 transition duration-1s ease-in-out flex justify-center items-center contents-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 opacity-90 hover:opacity-100 rounded-full py-2 shadow-xl cursor-pointer ">
+                <a
+                  className="text-white hover:text-white"
+                  target="_blank"
+                  href="https://github.com/Turkyden"
+                >
+                  ❤️ Sponsor me on GitHub
+                </a>
+              </div>
+              <div className="transform hover:scale-105 transition duration-1s ease-in-out flex justify-center items-center contents-center bg-gradient-to-r from-green-400 via-blue-500 to-indigo-500 opacity-90 hover:opacity-100 rounded-full py-2 shadow-xl cursor-pointer ">
+                <a
+                  className="text-white hover:text-white"
+                  target="_blank"
+                  href="https://github.com/Turkyden"
+                >
+                  😉 Follow me on GitHub
+                </a>
+              </div>
+              <div className="transform hover:scale-105 transition duration-1s ease-in-out flex justify-center items-center contents-center bg-gray-600 hover:bg-gray-700 rounded-full py-2 text-white shadow-xl cursor-pointer ">
+                <a
+                  className="text-white hover:text-white"
+                  target="_blank"
+                  href="https://github.com/Turkyden/md-resume"
+                >
+                  <span className="pr-4">⭐ Star the project</span>
+                  <img
+                    alt="GitHub Repo stars"
+                    src="https://img.shields.io/github/stars/Turkyden/md-resume?style=social"
+                  />
+                </a>
+              </div>
             </div>
-            <div className="pt-6"># 方式 2</div>
-            <img
-              className="w-48"
+            {/* <img
+              className="w-full"
               src="https://watermark-pro.vercel.app/static/wechat.22a540b9.png"
-            />
+            /> */}
           </div>
         ),
         onOk: () => window.print(),
         onCancel: () => window.print(),
-        okText: "下次再说",
       });
       setDonation("1");
     } else {
@@ -122,38 +161,51 @@ export default function IndexPage() {
   return (
     <div className="w-screen h-screen overflow-hidden">
       <div
-        className="w-full bg-black absolute top-0 left-0 z-50 flex justify-between items-center px-10 py-2 shadow"
+        className="w-full h-12 bg-black absolute top-0 left-0 z-50 flex justify-between items-center px-10 py-2 shadow-lg"
         style={{ backgroundColor: "rgb(36, 41, 47)" }}
       >
         <div className="flex justify-center items-center">
-          <div className="text-xl text-white font-mono pl-4">MD RESUME</div>
           <a
+            className="text-xl font-mono mx-2 transition-all font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-yellow-500 border-0 border-b border-dotted no-underline border-red-500 hover:opacity-80 hover:text-transparent"
+            href="https://github.com/Turkyden/md-resume"
+            target="_blank"
+          >
+            MD RESUME
+          </a>
+          {/* <a
             className="mx-4"
-            href="https://github.com/Turkyden/handsome-elements"
+            href="https://github.com/Turkyden/md-resume"
             target="_blank"
           >
             <img
               className=""
               alt="GitHub Repo stars"
-              src="https://img.shields.io/github/stars/Turkyden/handsome-elements?style=social"
+              src="https://img.shields.io/github/stars/Turkyden/md-resume?style=social"
             />
-          </a>
+          </a> */}
         </div>
 
         <div className="flex space-x-6 justify-between items-center text-white">
-          <InsertRowAboveOutlined
-            className="cursor-pointer text-lg"
-            onClick={() => setDirection("vertical")}
-          />
-          <InsertRowLeftOutlined
-            className="cursor-pointer text-lg"
-            onClick={() => setDirection("horizontal")}
-          />
-          <TableOutlined
-            className="cursor-pointer text-lg"
-            onClick={() => setDirection("full")}
-          />
-          <Popover
+          <span className={direction === "vertical" ? "text-green-500" : ""}>
+            <InsertRowAboveOutlined
+              className="cursor-pointer text-lg"
+              onClick={() => setDirection("vertical")}
+            />
+          </span>
+          <span className={direction === "horizontal" ? "text-indigo-500" : ""}>
+            <InsertRowLeftOutlined
+              className="cursor-pointer text-lg"
+              onClick={() => setDirection("horizontal")}
+            />
+          </span>
+          <span className={direction === "full" ? "text-blue-500" : ""}>
+            <TableOutlined
+              className="cursor-pointer text-lg"
+              onClick={() => setDirection("full")}
+            />
+          </span>
+          <div className="w-1 h-4 border-solid border-0 border-l border-gray-500"></div>
+          {/* <Popover
             content={
               <div className="w-48 flex flex-wrap">
                 <div className="w-24 h-24 text-center flex flex-col items-center justify-center">
@@ -186,7 +238,7 @@ export default function IndexPage() {
             title={null}
           >
             <PictureOutlined className="cursor-pointer text-lg" />
-          </Popover>
+          </Popover> */}
           <PrinterOutlined className="cursor-pointer text-lg" onClick={print} />
         </div>
       </div>
