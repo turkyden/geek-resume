@@ -7,9 +7,7 @@ export default defineConfig({
   theme: {
     "@primary-color": "#000000",
   },
-  links: [
-    '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />',
-  ],
+  links: [""],
   nodeModulesTransform: {
     type: "none",
   },

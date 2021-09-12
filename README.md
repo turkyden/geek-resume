@@ -27,6 +27,9 @@ Inspired by https://visiky.github.io/resume/
 - [ ] Avatar Filter
 - [ ] Social Icon List
 - [ ] Mult Template
+- [ ] Translate Helper
+- [ ] Mobile Preview
+- [ ] Export HTML
 
 ## Contribution
 

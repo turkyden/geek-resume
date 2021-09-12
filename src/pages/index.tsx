@@ -189,20 +189,38 @@ export default function IndexPage() {
           </a> */}
         </div>
 
-        <div className="flex space-x-6 justify-between items-center text-white">
-          <span className={direction === "vertical" ? "text-green-500" : ""}>
+        <div className="flex space-x-6 justify-between items-center text-gray-400">
+          <span
+            className={`transition duration-1s ease-in-out hover:text-white ${
+              direction === "vertical"
+                ? "text-yellow-500 hover:text-yellow-500"
+                : ""
+            }`}
+          >
             <InsertRowAboveOutlined
               className="cursor-pointer text-lg"
               onClick={() => setDirection("vertical")}
             />
           </span>
-          <span className={direction === "horizontal" ? "text-indigo-500" : ""}>
+          <span
+            className={`transition duration-1s ease-in-out hover:text-white ${
+              direction === "horizontal"
+                ? "text-yellow-500 hover:text-yellow-500"
+                : ""
+            }`}
+          >
             <InsertRowLeftOutlined
               className="cursor-pointer text-lg"
               onClick={() => setDirection("horizontal")}
             />
           </span>
-          <span className={direction === "full" ? "text-blue-500" : ""}>
+          <span
+            className={`transition duration-1s ease-in-out hover:text-white ${
+              direction === "full"
+                ? "text-yellow-500 hover:text-yellow-500"
+                : ""
+            }`}
+          >
             <TableOutlined
               className="cursor-pointer text-lg"
               onClick={() => setDirection("full")}
@@ -243,7 +261,10 @@ export default function IndexPage() {
           >
             <PictureOutlined className="cursor-pointer text-lg" />
           </Popover> */}
-          <PrinterOutlined className="cursor-pointer text-lg" onClick={print} />
+          <PrinterOutlined
+            className="transition duration-1s ease-in-out hover:text-white cursor-pointer text-lg"
+            onClick={print}
+          />
         </div>
       </div>
       <MySplit direction={direction}>
