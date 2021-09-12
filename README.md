@@ -14,7 +14,7 @@ English | [简体中文](./README_cn-zh.md)
 >
 > **大道至简**，简单的东西往往带给人们的是更多的享受。
 >
-> \_\_\_ Baohaus. Ludwig Mies van der Rohe
+> \_\_\_ Ludwig Mies van der Rohe. Baohaus 包豪斯
 
 ## ✨ Feather
 
@@ -28,13 +28,13 @@ English | [简体中文](./README_cn-zh.md)
 
 ## 🔨 Contribution
 
-Install dependencies,
+Install the dependencies
 
 ```bash
 $ yarn
 ```
 
-Start the dev server,
+Start the dev server
 
 ```bash
 $ yarn start
