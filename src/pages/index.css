@@ -1,8 +1,4 @@
 /** Split Pane **/
-::-webkit-scrollbar, ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-track {
-  display: none;
-}
-
 .gutter {
   background-color: rgb(36, 41, 47);
   background-repeat: no-repeat;
