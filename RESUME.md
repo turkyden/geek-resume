@@ -15,6 +15,7 @@
 [![zhihu](https://cdn.jsdelivr.net/gh/Turkyden/md-resume/logo/social/zhihu.png)](https://www.zhihu.com/people/visiky)&nbsp;&nbsp;
 [![segmentfault](https://cdn.jsdelivr.net/gh/Turkyden/md-resume/logo/social/segmentfault.png)](https://segmentfault.com/)&nbsp;&nbsp;
 [![juejin](https://cdn.jsdelivr.net/gh/Turkyden/md-resume/logo/social/juejin.png)](https://juejin.cn/user/3737995262834814)&nbsp;&nbsp;
+[![yuque](https://cdn.jsdelivr.net/gh/Turkyden/md-resume/logo/social/yuque.png)](https://www.yuque.com/kasmine)&nbsp;&nbsp;
 [![stackoverflow](https://cdn.jsdelivr.net/gh/Turkyden/md-resume/logo/social/stackoverflow.png)](https://stackoverflow.com/)&nbsp;&nbsp;
 [![codepen](https://cdn.jsdelivr.net/gh/Turkyden/md-resume/logo/social/codepen.png)](https://codepen.io/)&nbsp;&nbsp;
 [![codesandbox](https://cdn.jsdelivr.net/gh/Turkyden/md-resume/logo/social/codesandbox.png)](https://codesandbox.io/)&nbsp;&nbsp;

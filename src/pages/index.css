@@ -85,3 +85,7 @@ body {
     box-shadow: none;
   }
 }
+
+.Mobile{
+  width: 375px;
+}
