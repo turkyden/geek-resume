@@ -2,8 +2,8 @@ import { defineConfig } from "umi";
 
 export default defineConfig({
   title: "Github Resume",
-  // ssr: {},
-  // exportStatic: {},
+  ssr: {},
+  exportStatic: {},
   theme: {
     "@primary-color": "#000000",
   },

@@ -62,9 +62,9 @@ body {
     width: calc(100% - var(--bleeding) * 2);
     height: calc(100% - var(--bleeding) * 2);
     margin: var(--bleeding);
-    outline: thin dashed black;
+    outline: thin dashed #ccc;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 2;
   }
 }
 
