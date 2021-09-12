@@ -10,11 +10,11 @@ English | [简体中文](./README_cn-zh.md)
 
 <p align="center"><a href="https://md-resume.vercel.app" target="_blank">: : : Live Demo : : :</a></p>
 
-> "Less is more", The simple things often bring people more enjoyment.
+> **Less is more**, the simple things often bring people more enjoyment.
 >
-> 译：「大道至简」简单的东西往往带给人们的是更多的享受。
+> **大道至简**，简单的东西往往带给人们的是更多的享受。
 >
-> \_\_\_ Baohaus
+> \_\_\_ Baohaus. Ludwig Mies van der Rohe
 
 ## ✨ Feather
 
