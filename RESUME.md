@@ -1,13 +1,13 @@
 ## 前端开发工程师
 
-<img style="border-radius: 100%; padding-left: 0; margin-left: 10px; filter: brightness(1.2) contrast(.85) saturate(.05) sepia(.2)" src="https://avatars.githubusercontent.com/u/15646325?v=4" width="160" height="160" alt="avatar" align="right">
+<img style="border-radius: 100%; padding-left: 0; margin-left: 10px; filter: brightness(1.2) contrast(.85) saturate(.05) sepia(.2)" src="https://avatars.githubusercontent.com/u/15646325?v=4" width="140" height="140" alt="avatar" align="right">
 
-[![GitHub User's stars](https://img.shields.io/github/stars/visiky?style=social)](https://github.com/visiky)
-[![Github](https://img.shields.io/github/followers/visiky?label=Follow&style=social)](https://github.com/visiky)
 [![Mail](https://img.shields.io/badge/-736929286@qq.com-gray?style=flat-square&logo=gmail&logoColor=red&link=)](mailto:736929286@qq.com)
 [![Wechat](https://img.shields.io/badge/-15625057119-07c160?style=flat-square&logo=Wechat&logoColor=white)](https://www.linkedin.com/in/alexey-khachatryan-8707b7a5/)
+[![GitHub User's stars](https://img.shields.io/github/stars/visiky?style=social)](https://github.com/visiky)
+[![Github](https://img.shields.io/github/followers/visiky?label=Follow&style=social)](https://github.com/visiky)
 
-你好，我是廖晓娟，一个自驱型前端工程师，三年多大型复杂产品开发经验，负责蚂蚁集团 BI 产品 DeepInsight 的可视化建设，参与了从图表库到 BI 产品力的一体化建设，对商业智能领域的数据可视化建设有较为丰富的经验。
+你好，我是廖晓娟，一个自驱型前端工程师，三年多大型复杂产品开发经验，负责蚂蚁集团 BI 产品 DeepInsight 的可视化建设，参与从图表库到 BI 产品力的一体化建设，对商业智能领域数据可视化建设有较为丰富的经验。
 
 <!-- My Social Links -->
 
@@ -29,7 +29,7 @@
 
 ### 教育背景
 
-**`2014.09 ~ 2021.07`** 华南理工大学 / 网络工程 / 本科 / 工学学士
+**`2014.09 ~ 2018.06`** 华南理工大学 / 网络工程 / 本科 / 工学学士
 
 英语 CET6、蚂蚁近卫军·卓越个人奖、前端练习生·可视化讲师、前端早早聊分享
 
