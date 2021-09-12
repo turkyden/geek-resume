@@ -1,9 +1,9 @@
 import { defineConfig } from "umi";
 
 export default defineConfig({
-  title: "Github Resume",
-  ssr: {},
-  exportStatic: {},
+  title: "MD Resume - Pure Markdown, an online resume editor for developer.",
+  // ssr: {},
+  // exportStatic: {},
   theme: {
     "@primary-color": "#000000",
   },

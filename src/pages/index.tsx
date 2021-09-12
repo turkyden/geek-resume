@@ -15,7 +15,7 @@ import {
   PrinterOutlined,
 } from "@ant-design/icons";
 
-import RESUME from "../../README.md";
+import RESUME from "../../RESUME.md";
 
 import "antd/dist/antd.less";
 import "./index.css";
