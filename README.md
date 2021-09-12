@@ -14,9 +14,11 @@ English | [简体中文](./README_cn-zh.md)
 >
 > **大道至简**，简单的东西往往带给人们的是更多的享受。
 >
-> \_\_\_ Ludwig Mies van der Rohe. Baohaus 包豪斯
+> \_\_\_ Ludwig Mies van der Rohe. Bauhaus 包豪斯
 
-## ✨ Feather
+Inspired by https://visiky.github.io/resume/
+
+## Feather
 
 - [x] Grid Layout System
 - [x] PDF Print
@@ -26,7 +28,7 @@ English | [简体中文](./README_cn-zh.md)
 - [ ] Social Icon List
 - [ ] Mult Template
 
-## 🔨 Contribution
+## Contribution
 
 Install the dependencies
 
@@ -40,15 +42,18 @@ Start the dev server
 $ yarn start
 ```
 
-## 🔖 Refference
+## Refference
 
-- [TailwindCSS](http://watermark.dxcweb.com/)
-- [Ant Design](https://github.com/bokuweb/react-rnd)
-- [Umijs](http://watermark.dxcweb.com/)
-- [Monaco Editor](https://github.com/pansyjs/react-components/tree/master/packages/watermark)
+Thanks for the following project.
+
+- [TailwindCSS](https://www.tailwindcss.cn/)
+- [Ant Design](https://ant.design/)
+- [Umijs](https://umijs.org/)
+- [Ahooks](https://ahooks.js.org/)
+- [Monaco React](https://github.com/suren-atoyan/monaco-react)
 - [PatternCSS](https://bansal.io/pattern-css)
 
-## ❤️ Contributors
+## Contributors
 
 Thanks goes to these people:
 
@@ -56,7 +61,7 @@ Thanks goes to these people:
 
 Please Feel free to enjoy and participate in open source!
 
-## ⭐ Stargazers
+## Stargazers
 
 Thanks for your star!
 

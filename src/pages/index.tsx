@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Frame from "react-frame-component";
 import Split from "react-split";
 import Editor from "@monaco-editor/react";
@@ -21,7 +21,13 @@ import "antd/dist/antd.less";
 import "./index.css";
 import "pattern.css/dist/pattern.css";
 
-function MySplit({ direction, children }) {
+function MySplit({
+  direction,
+  children,
+}: {
+  direction: "vertical" | "horizontal" | "full";
+  children: React.ReactNode;
+}) {
   useEffect(() => {
     if (direction === "vertical") {
       document.querySelector(".monaco-view").style.height = "calc(60% - 5px)";
@@ -85,9 +91,7 @@ export default function IndexPage() {
 
   const [direction, setDirection] = useState("horizontal");
 
-  const onChange = (code: string) => setCode(code);
-
-  const print = (e: Event) => {
+  const print = useCallback((e: Event) => {
     if (donation !== "1") {
       Modal.info({
         title: (
@@ -156,7 +160,7 @@ export default function IndexPage() {
     } else {
       window.print();
     }
-  };
+  }, []);
 
   return (
     <div className="w-screen h-screen overflow-hidden">
@@ -284,19 +288,19 @@ export default function IndexPage() {
           defaultLanguage="markdown"
           theme="vs-dark"
           value={code}
-          onChange={onChange}
-          onMount={(editor, monaco) => {
-            console.log(editor, monaco);
-            editor.addCommand(
-              monaco.KeyMod.CtrlCmd | monaco.KeyCode.KEY_C,
-              () => {
-                document.querySelector("#copy_to_clipboard")?.click();
-              }
-            );
-            editor.onContextMenu((e, a) => {
-              console.log(e, a);
-            });
-          }}
+          onChange={setCode}
+          // onMount={(editor, monaco) => {
+          //   console.log(editor, monaco);
+          //   editor.addCommand(
+          //     monaco.KeyMod.CtrlCmd | monaco.KeyCode.KEY_C,
+          //     () => {
+          //       document.querySelector("#copy_to_clipboard")?.click();
+          //     }
+          //   );
+          //   editor.onContextMenu((e, a) => {
+          //     console.log(e, a);
+          //   });
+          // }}
         />
       </MySplit>
     </div>
