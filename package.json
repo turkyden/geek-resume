@@ -25,6 +25,7 @@
     "@monaco-editor/react": "^4.2.1",
     "ahooks": "^2.10.9",
     "antd": "^4.16.13",
+    "github-markdown-css": "^4.0.0",
     "pattern.css": "^1.0.0",
     "re-resizable": "^6.9.0",
     "react": "17.x",

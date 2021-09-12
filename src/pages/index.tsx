@@ -1,40 +1,87 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Frame from "react-frame-component";
 import Split from "react-split";
 import Editor from "@monaco-editor/react";
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
-import prettier from "prettier/standalone";
-import parserHTML from "prettier/parser-html";
-import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useSessionStorageState } from "ahooks";
-import { useHotkeys } from "react-hotkeys-hook";
 import { Modal, Popover, Button, message } from "antd";
-import { CopyOutlined, PictureOutlined } from "@ant-design/icons";
+import {
+  PictureOutlined,
+  InsertRowAboveOutlined,
+  InsertRowLeftOutlined,
+  TableOutlined,
+  PrinterOutlined,
+} from "@ant-design/icons";
 
-import RESUME from "./resume.md";
+import RESUME from "../../README.md";
 
 import "antd/dist/antd.less";
 import "./index.css";
 import "pattern.css/dist/pattern.css";
+
+function MySplit({ direction, children }) {
+  useEffect(() => {
+    if (direction === "vertical") {
+      document.querySelector(".monaco-view").style.height = "calc(50% - 5px)";
+      document.querySelector(".monaco-view").style.width = "auto";
+      document.querySelector(".monaco-editor").style.height = "calc(50% - 5px)";
+      document.querySelector(".monaco-editor").style.width = "auto";
+      if (!document.querySelector(".gutter")) return;
+      document
+        .querySelector(".gutter")
+        .classList.replace("gutter-horizontal", "gutter-vertical");
+      document.querySelector(".gutter").style.height = "10px";
+      document.querySelector(".gutter").style.width = "auto";
+    } else if (direction === "horizontal") {
+      document.querySelector(".monaco-view").style.width = "calc(50% - 5px)";
+      document.querySelector(".monaco-view").style.height = "auto";
+      document.querySelector(".monaco-editor").style.height = "calc(50% - 5px)";
+      document.querySelector(".monaco-editor").style.height = "auto";
+      if (!document.querySelector(".gutter")) return;
+      document
+        .querySelector(".gutter")
+        .classList.replace("gutter-vertical", "gutter-horizontal");
+      document.querySelector(".gutter").style.height = "auto";
+      document.querySelector(".gutter").style.width = "10px";
+    } else {
+    }
+  }, [direction]);
+
+  if (direction === "vertical") {
+    return (
+      <Split className="w-full h-full pt-12" direction="vertical" minSize={0}>
+        {children}
+      </Split>
+    );
+  }
+  if (direction === "horizontal") {
+    return (
+      <Split
+        className="w-full h-full pt-12 flex"
+        direction="horizontal"
+        minSize={0}
+      >
+        {children}
+      </Split>
+    );
+  }
+  return (
+    <div className="w-screen h-screen pt-12 overflow-auto">{children[0]}</div>
+  );
+}
 
 export default function IndexPage() {
   const [code, setCode] = useState(RESUME);
 
   const [donation, setDonation] = useSessionStorageState("user-message", "0");
 
-  useHotkeys("up", () => {
-    message.success("Up");
-  });
-
-  useHotkeys("down", () => {
-    message.success("Down");
-  });
+  const [direction, setDirection] = useState("horizontal");
 
   const onChange = (code: string) => setCode(code);
 
-  const onCopy = (e: Event) => {
+  const print = (e: Event) => {
     if (donation !== "1") {
       Modal.info({
         title: "🎉 有你支持，我们会做的更好！",
@@ -62,11 +109,13 @@ export default function IndexPage() {
             />
           </div>
         ),
+        onOk: () => window.print(),
+        onCancel: () => window.print(),
         okText: "下次再说",
       });
       setDonation("1");
     } else {
-      message.success("Copyed !");
+      window.print();
     }
   };
 
@@ -77,19 +126,7 @@ export default function IndexPage() {
         style={{ backgroundColor: "rgb(36, 41, 47)" }}
       >
         <div className="flex justify-center items-center">
-          <svg
-            height="32"
-            viewBox="0 0 16 16"
-            version="1.1"
-            width="32"
-            fill="#fff"
-          >
-            <path
-              fillRule="evenodd"
-              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
-            ></path>
-          </svg>
-          <div className="text-xl text-white font-mono pl-4">Github Resume</div>
+          <div className="text-xl text-white font-mono pl-4">MD RESUME</div>
           <a
             className="mx-4"
             href="https://github.com/Turkyden/handsome-elements"
@@ -103,7 +140,19 @@ export default function IndexPage() {
           </a>
         </div>
 
-        <div className="w-16 flex justify-between items-center text-white">
+        <div className="flex space-x-6 justify-between items-center text-white">
+          <InsertRowAboveOutlined
+            className="cursor-pointer text-lg"
+            onClick={() => setDirection("vertical")}
+          />
+          <InsertRowLeftOutlined
+            className="cursor-pointer text-lg"
+            onClick={() => setDirection("horizontal")}
+          />
+          <TableOutlined
+            className="cursor-pointer text-lg"
+            onClick={() => setDirection("full")}
+          />
           <Popover
             content={
               <div className="w-48 flex flex-wrap">
@@ -129,7 +178,7 @@ export default function IndexPage() {
                     alt="github"
                     src="https://camo.githubusercontent.com/b079fe922f00c4b86f1b724fbc2e8141c468794ce8adbc9b7456e5e1ad09c622/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6769746875622e737667"
                   ></img>
-                  <div className="text-gray-500 pt-2">技术</div>
+                  <div className="text-gray-500 pt-2">徽标</div>
                 </div>
               </div>
             }
@@ -138,132 +187,66 @@ export default function IndexPage() {
           >
             <PictureOutlined className="cursor-pointer text-lg" />
           </Popover>
-          <CopyToClipboard text={code} onCopy={onCopy}>
-            <CopyOutlined
-              className="cursor-pointer text-lg"
-              id="copy_to_clipboard"
-            />
-          </CopyToClipboard>
+          <PrinterOutlined className="cursor-pointer text-lg" onClick={print} />
         </div>
       </div>
-      <div className="w-full h-screen flex">
-        {/* <div className="w-48 bg-gray-200 pt-10 overflow-auto shadow-2xl">
-          <div className="p-4">
-            --
-          </div>
-        </div> */}
-        <Split className="w-full split pt-12 " minSize={[500, 400]}>
-          <div className="flex justify-center items-center bg-gray-100 relative overflow-auto | pattern-checks-sm text-gray-300">
-            <Frame
-              className="w-full h-full border-0 overflow-hidden"
-              head={
-                <>
-                  <link
-                    rel="stylesheet"
-                    href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css"
-                  />
-                  <style>{`
-                  :root {
-                    --bleeding: 0.5cm;
-                    --margin: 0.5cm;
-                  }
-                  
-                  @page {
-                    size: A4;
-                    margin: 0;
-                  }
-                  
-                  * {
-                    box-sizing: border-box;
-                  }
-                  
-                  body {
-                    margin: 0;
-                  }
-
-                  .A4Wrapper{
-                    display: flex;
-                  }
-                  
-                  .A4 {
-                    display: inline-block;
-                    position: relative;
-                    /* height: 297mm; */
-                    width: 210mm;
-                    font-size: 12pt;
-                    margin: 2em auto;
-                    padding: calc(var(--bleeding) + var(--margin));
-                    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
-                    background: white;
-                  }
-                  
-                  @media screen {
-                    .A4::after {
-                      position: absolute;
-                      content: '';
-                      top: 0;
-                      left: 0;
-                      width: calc(100% - var(--bleeding) * 2);
-                      height: calc(100% - var(--bleeding) * 2);
-                      margin: var(--bleeding);
-                      outline: thin dashed black;
-                      pointer-events: none;
-                      z-index: 9999;
-                    }
-                  }
-                  
-                  @media print {
-                    .A4Wrapper{
-                      position: fixed;
-                      top: 0;
-                      left: 0;
-                      width: 100%;
-                      display: flex;
-                      flex-direction: column;
-                      background: #fff;
-                      z-index: 99999;
-                      margin: 0 auto;
-                      overflow-y: auto;
-                    }
-                    .A4 {
-                      margin: 0;
-                      overflow: hidden;/
-                  }
-                  `}</style>
-                </>
-              }
-            >
-              <div className="A4Wrapper">
+      <MySplit direction={direction}>
+        <div className="monaco-view flex bg-gray-100 relative overflow-auto | pattern-checks-sm text-gray-300">
+          <div className="m-auto A4Wrapper">
+            <div className="A4">
+              <Frame
+                className="w-full border-0 overflow-hidden"
+                style={{ height: 1020 }}
+                head={
+                  <>
+                    <link
+                      rel="stylesheet"
+                      href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css"
+                    />
+                    <style>{`
+                      *{ margin: 0 }
+                      body{ overflow: hidden }
+                    `}</style>
+                  </>
+                }
+              >
                 <ReactMarkdown
                   rehypePlugins={[rehypeRaw, gfm]}
-                  className="A4 markdown-body"
+                  className="markdown-body"
+                  components={{
+                    // Rewrite `em`s (`*like so*`) to `i` with a red foreground color.
+                    a: ({ node, ...props }) => (
+                      <a target="__blank" {...props} />
+                    ),
+                  }}
                 >
                   {code}
                 </ReactMarkdown>
-              </div>
-            </Frame>
+              </Frame>
+            </div>
           </div>
-          <Editor
-            height="calc(100% - 0px)"
-            defaultLanguage="markdown"
-            theme="vs-dark"
-            value={code}
-            onChange={onChange}
-            onMount={(editor, monaco) => {
-              console.log(editor, monaco);
-              editor.addCommand(
-                monaco.KeyMod.CtrlCmd | monaco.KeyCode.KEY_C,
-                () => {
-                  document.querySelector("#copy_to_clipboard")?.click();
-                }
-              );
-              editor.onContextMenu((e, a) => {
-                console.log(e, a);
-              });
-            }}
-          />
-        </Split>
-      </div>
+        </div>
+        <Editor
+          wrapperClassName="monaco-editor"
+          height="calc(100% - 0px)"
+          defaultLanguage="markdown"
+          theme="vs-dark"
+          value={code}
+          onChange={onChange}
+          onMount={(editor, monaco) => {
+            console.log(editor, monaco);
+            editor.addCommand(
+              monaco.KeyMod.CtrlCmd | monaco.KeyCode.KEY_C,
+              () => {
+                document.querySelector("#copy_to_clipboard")?.click();
+              }
+            );
+            editor.onContextMenu((e, a) => {
+              console.log(e, a);
+            });
+          }}
+        />
+      </MySplit>
     </div>
   );
 }
