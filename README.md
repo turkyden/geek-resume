@@ -12,7 +12,7 @@ English | [简体中文](./README_cn-zh.md)
 
 > "Less is more", The simple things often bring people more enjoyment.
 >
-> 「大道至简」简单的东西往往带给人们的是更多的享受。
+> 译：「大道至简」简单的东西往往带给人们的是更多的享受。
 >
 > \_\_\_ Baohaus
 
