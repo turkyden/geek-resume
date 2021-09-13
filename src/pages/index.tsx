@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import Frame from "react-frame-component";
 import Split from "react-split";
 import Editor from "@monaco-editor/react";
@@ -6,7 +6,7 @@ import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import { useSessionStorageState } from "ahooks";
-import { Modal, Popover, Button, message } from "antd";
+import { Modal, Tooltip, Popover, Button, message } from "antd";
 import {
   PictureOutlined,
   InsertRowAboveOutlined,
@@ -14,6 +14,7 @@ import {
   TableOutlined,
   PrinterOutlined,
 } from "@ant-design/icons";
+import * as utils from "@/utils";
 
 import RESUME from "../../RESUME.md";
 
@@ -85,6 +86,8 @@ function MySplit({
 }
 
 export default function IndexPage() {
+  const ref = useRef(undefined);
+
   const [code, setCode] = useState(RESUME);
 
   const [donation, setDonation] = useSessionStorageState("user-message", "0");
@@ -153,12 +156,11 @@ export default function IndexPage() {
             /> */}
           </div>
         ),
-        onOk: () => window.print(),
-        onCancel: () => window.print(),
+        onOk: () => utils.print(ref.current, "应聘岗位-求职者-联系方式.pdf"),
       });
       setDonation("1");
     } else {
-      window.print();
+      utils.print(ref.current, "应聘岗位-求职者-联系方式.pdf");
     }
   }, []);
 
@@ -262,6 +264,7 @@ export default function IndexPage() {
             <PictureOutlined className="cursor-pointer text-lg" />
           </Popover> */}
           <PrinterOutlined
+            title="Export as PDF"
             className="transition duration-1s ease-in-out hover:text-white cursor-pointer text-lg"
             onClick={print}
           />
@@ -270,7 +273,7 @@ export default function IndexPage() {
       <MySplit direction={direction}>
         <div className="monaco-view flex bg-gray-100 relative overflow-auto | pattern-checks-sm text-gray-300">
           <div className="m-auto A4Wrapper">
-            <div className="A4">
+            <div ref={ref} className="A4">
               <Frame
                 className="w-full border-0 overflow-hidden"
                 style={{ height: 1020 }}
