@@ -6,7 +6,7 @@ import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import { useSessionStorageState } from "ahooks";
-import { Modal, Popover, Button, message } from "antd";
+import { Modal, Tooltip, Popover, Button, message } from "antd";
 import {
   PictureOutlined,
   InsertRowAboveOutlined,
@@ -157,8 +157,6 @@ export default function IndexPage() {
           </div>
         ),
         onOk: () => utils.print(ref.current, "应聘岗位-求职者-联系方式.pdf"),
-        onCancel: () =>
-          utils.print(ref.current, "应聘岗位-求职者-联系方式.pdf"),
       });
       setDonation("1");
     } else {
@@ -266,6 +264,7 @@ export default function IndexPage() {
             <PictureOutlined className="cursor-pointer text-lg" />
           </Popover> */}
           <PrinterOutlined
+            title="Export as PDF"
             className="transition duration-1s ease-in-out hover:text-white cursor-pointer text-lg"
             onClick={print}
           />
