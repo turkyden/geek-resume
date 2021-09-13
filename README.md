@@ -56,6 +56,17 @@ Thanks for the following project.
 - [Monaco React](https://github.com/suren-atoyan/monaco-react)
 - [PatternCSS](https://bansal.io/pattern-css)
 
+## Recommendation
+
+There are some nice works should be recommended here.
+
+- https://github.com/visiky/resume
+- https://github.com/Ovilia/cv
+- https://resume.mdedit.online/
+- https://github.com/geekcompany/ResumeSample
+- https://github.com/billryan/resume
+- https://github.com/jirengu-inc/animating-resume
+
 ## Contributors
 
 Thanks goes to these people:
