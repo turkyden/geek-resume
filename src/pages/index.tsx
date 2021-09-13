@@ -95,7 +95,7 @@ export default function IndexPage() {
   const [direction, setDirection] = useState("horizontal");
 
   const print = useCallback((e: Event) => {
-    if (donation !== "1") {
+    if (true) {
       Modal.info({
         title: (
           <span>
@@ -124,7 +124,7 @@ export default function IndexPage() {
                   target="_blank"
                   href="https://github.com/Turkyden"
                 >
-                  ❤️ Sponsor me on GitHub
+                  ❤️ Sponsor me on gitHub
                 </a>
               </div>
               <div className="transform hover:scale-105 transition duration-1s ease-in-out flex justify-center items-center contents-center bg-gradient-to-r from-green-400 via-blue-500 to-indigo-500 opacity-90 hover:opacity-100 rounded-full py-2 shadow-xl cursor-pointer ">
@@ -133,7 +133,7 @@ export default function IndexPage() {
                   target="_blank"
                   href="https://github.com/Turkyden"
                 >
-                  😉 Follow me on GitHub
+                  😉 Follow me on gitHub
                 </a>
               </div>
               <div className="transform hover:scale-105 transition duration-1s ease-in-out flex justify-center items-center contents-center bg-gray-600 hover:bg-gray-700 rounded-full py-2 text-white shadow-xl cursor-pointer ">
@@ -142,11 +142,7 @@ export default function IndexPage() {
                   target="_blank"
                   href="https://github.com/Turkyden/md-resume"
                 >
-                  <span className="pr-4">⭐ Star the project</span>
-                  <img
-                    alt="GitHub Repo stars"
-                    src="https://img.shields.io/github/stars/Turkyden/md-resume?style=social"
-                  />
+                  ⭐ Star the interesting project
                 </a>
               </div>
             </div>
@@ -179,7 +175,7 @@ export default function IndexPage() {
             MD RESUME
           </a>
           {/* <a
-            className="mx-4"
+            className="ml-4"
             href="https://github.com/Turkyden/md-resume"
             target="_blank"
           >
@@ -193,7 +189,7 @@ export default function IndexPage() {
 
         <div className="flex space-x-6 justify-between items-center text-gray-400">
           <span
-            className={`transition duration-1s ease-in-out hover:text-white ${
+            className={`flex items-center transition duration-1s ease-in-out hover:text-white ${
               direction === "vertical"
                 ? "text-yellow-500 hover:text-yellow-500"
                 : ""
@@ -205,7 +201,7 @@ export default function IndexPage() {
             />
           </span>
           <span
-            className={`transition duration-1s ease-in-out hover:text-white ${
+            className={`flex items-center transition duration-1s ease-in-out hover:text-white ${
               direction === "horizontal"
                 ? "text-yellow-500 hover:text-yellow-500"
                 : ""
@@ -217,7 +213,7 @@ export default function IndexPage() {
             />
           </span>
           <span
-            className={`transition duration-1s ease-in-out hover:text-white ${
+            className={`flex items-center transition duration-1s ease-in-out hover:text-white ${
               direction === "full"
                 ? "text-yellow-500 hover:text-yellow-500"
                 : ""
@@ -268,6 +264,17 @@ export default function IndexPage() {
             className="transition duration-1s ease-in-out hover:text-white cursor-pointer text-lg"
             onClick={print}
           />
+          <a
+            className="ml-4"
+            href="https://github.com/Turkyden/md-resume"
+            target="_blank"
+          >
+            <img
+              className=""
+              alt="GitHub Repo stars"
+              src="https://img.shields.io/github/stars/Turkyden/md-resume?style=social"
+            />
+          </a>
         </div>
       </div>
       <MySplit direction={direction}>
