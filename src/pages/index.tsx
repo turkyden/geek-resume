@@ -109,7 +109,7 @@ export default function IndexPage() {
         icon: null,
         maskClosable: true,
         centered: true,
-        okText: "OK",
+        okText: "Download PDF",
         content: (
           <div>
             <p className="text-center">Glad it helps!</p>
