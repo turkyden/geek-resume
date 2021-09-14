@@ -103,9 +103,9 @@ export default function IndexPage() {
             <a
               className="underline"
               target="_blank"
-              href="https://github.com/Turkyden"
+              href="https://github.com/turkyden"
             >
-              @Turkyden
+              @turkyden
             </a>
           </span>
         ),
@@ -122,7 +122,7 @@ export default function IndexPage() {
                 <a
                   className="text-white hover:text-white"
                   target="_blank"
-                  href="https://github.com/Turkyden"
+                  href="https://github.com/turkyden"
                 >
                   ❤️ Sponsor me on gitHub
                 </a>
@@ -131,7 +131,7 @@ export default function IndexPage() {
                 <a
                   className="text-white hover:text-white"
                   target="_blank"
-                  href="https://github.com/Turkyden"
+                  href="https://github.com/turkyden"
                 >
                   😉 Follow me on gitHub
                 </a>
@@ -140,7 +140,7 @@ export default function IndexPage() {
                 <a
                   className="text-white hover:text-white"
                   target="_blank"
-                  href="https://github.com/Turkyden/md-resume"
+                  href="https://github.com/turkyden/md-resume"
                 >
                   ⭐ Star the interesting project
                 </a>
@@ -172,20 +172,20 @@ export default function IndexPage() {
         <div className="flex justify-center items-center">
           <a
             className="text-xl font-mono mx-2 transition-all font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-yellow-500 border-0 border-b border-dotted no-underline border-red-500 hover:opacity-80 hover:text-transparent"
-            href="https://github.com/Turkyden/md-resume"
+            href="https://github.com/turkyden/md-resume"
             target="_blank"
           >
             MD RESUME
           </a>
           {/* <a
             className="ml-4"
-            href="https://github.com/Turkyden/md-resume"
+            href="https://github.com/turkyden/md-resume"
             target="_blank"
           >
             <img
               className=""
               alt="GitHub Repo stars"
-              src="https://img.shields.io/github/stars/Turkyden/md-resume?style=social"
+              src="https://img.shields.io/github/stars/turkyden/md-resume?style=social"
             />
           </a> */}
         </div>
@@ -269,13 +269,13 @@ export default function IndexPage() {
           />
           <a
             className="ml-4"
-            href="https://github.com/Turkyden/md-resume"
+            href="https://github.com/turkyden/md-resume"
             target="_blank"
           >
             <img
               className=""
               alt="GitHub Repo stars"
-              src="https://img.shields.io/github/stars/Turkyden/md-resume?style=social"
+              src="https://img.shields.io/github/stars/turkyden/md-resume?style=social"
             />
           </a>
         </div>
