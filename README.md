@@ -2,11 +2,11 @@ English | [简体中文](./README_cn-zh.md)
 
 <h1 align="center">Markdown Resume</h1>
 
-<p align="center">Pure Markdown, an online resume editor for developer.
+<p align="center">💼 Pure Markdown, an online resume editor for developer.
 
 </p>
 
-![screenshot](./screenshot.png)
+![screenshot](https://cdn.jsdelivr.net/gh/Turkyden/md-resume/screenshot.png)
 
 <p align="center"><a href="https://md-resume.vercel.app" target="_blank">: : : Live Demo : : :</a></p>
 
