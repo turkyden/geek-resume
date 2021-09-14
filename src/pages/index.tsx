@@ -161,7 +161,10 @@ export default function IndexPage() {
   }, []);
 
   return (
-    <div className="w-screen h-screen overflow-hidden">
+    <div
+      className="w-screen h-screen overflow-hidden"
+      style={{ backgroundColor: "#1e1e1e" }}
+    >
       <div
         className="w-full h-12 bg-black absolute top-0 left-0 z-50 flex justify-between items-center px-10 py-2 shadow-lg"
         style={{ backgroundColor: "rgb(36, 41, 47)" }}
