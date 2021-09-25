@@ -6,7 +6,7 @@ English | [简体中文](./README_cn-zh.md)
 
 </p>
 
-![screenshot](https://cdn.jsdelivr.net/gh/Turkyden/md-resume/screenshot.png)
+![screenshot](https://cdn.jsdelivr.net/gh/turkyden/md-resume/screenshot.png)
 
 <p align="center"><a href="https://md-resume.vercel.app" target="_blank">: : : Live Demo : : :</a></p>
 
@@ -66,12 +66,13 @@ There are some nice works should be recommended here.
 - https://github.com/geekcompany/ResumeSample
 - https://github.com/billryan/resume
 - https://github.com/jirengu-inc/animating-resume
+- https://github.com/liangjingkanji/DrakeTyporaTheme
 
 ## Contributors
 
 Thanks goes to these people:
 
-![Contributors](https://contrib.rocks/image?repo=Turkyden/md-resume)
+![Contributors](https://contrib.rocks/image?repo=turkyden/md-resume)
 
 Please Feel free to enjoy and participate in open source!
 
@@ -79,7 +80,7 @@ Please Feel free to enjoy and participate in open source!
 
 Thanks for your star!
 
-[![Stargazers repo roster for @Turkyden/md-resume](https://reporoster.com/stars/Turkyden/md-resume)](https://github.com/Turkyden/md-resume/stargazers)
+[![Stargazers repo roster for @turkyden/md-resume](https://reporoster.com/stars/turkyden/md-resume)](https://github.com/turkyden/md-resume/stargazers)
 
 ## License
 
