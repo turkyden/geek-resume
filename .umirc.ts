@@ -2,9 +2,13 @@ import { defineConfig } from "umi";
 
 export default defineConfig({
   title: "Geek Resume - Pure Markdown, an online resume editor for developer.",
-  ssr: {},
-  exportStatic: {},
-  publicPath: "https://cdn.jsdelivr.net/gh/turkyden/geek-resume@gh-pages/",
+  // ssr: {},
+  // exportStatic: {},
+  runtimePublicPath: true,
+  publicPath:
+    process.env.NODE_ENV === "production"
+      ? "https://cdn.jsdelivr.net/gh/turkyden/geek-resume@gh-pages/"
+      : "/",
   mfsu: {},
   favicon: "/assets/favicon.ico",
   theme: {
