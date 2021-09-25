@@ -104,7 +104,7 @@ export default function IndexPage() {
       Modal.info({
         title: (
           <span>
-            MD Resume is made with heart by{" "}
+            Geek Resume is made with heart by{" "}
             <a
               className="underline"
               target="_blank"
@@ -240,7 +240,7 @@ export default function IndexPage() {
             href="https://github.com/turkyden/geek-resume"
             target="_blank"
           >
-            MD RESUME
+            GEEK RESUME 极简
           </a>
           {/* <a
             className="ml-4"
