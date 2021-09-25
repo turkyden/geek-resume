@@ -5,7 +5,7 @@ import Editor from "@monaco-editor/react";
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
-import { useSessionStorageState } from "ahooks";
+import { useLocalStorageState, useSessionStorageState } from "ahooks";
 import { Modal, Tooltip, Popover, Button, message } from "antd";
 import {
   PictureOutlined,
@@ -91,7 +91,9 @@ function MySplit({
 export default function IndexPage() {
   const ref = useRef(undefined);
 
-  const [code, setCode] = useState(RESUME);
+  // const [code, setCode] = useState(RESUME);
+
+  const [code, setCode] = useLocalStorageState("geek-resume-code", RESUME);
 
   const [donation, setDonation] = useSessionStorageState("user-message", "0");
 
@@ -143,7 +145,7 @@ export default function IndexPage() {
                 <a
                   className="text-white hover:text-white"
                   target="_blank"
-                  href="https://github.com/turkyden/md-resume"
+                  href="https://github.com/turkyden/geek-resume"
                 >
                   ⭐ Star the interesting project
                 </a>
@@ -204,7 +206,7 @@ export default function IndexPage() {
               </span>
             </div>
             <a
-              href="https://github.com/turkyden/md-resume/discussions/14"
+              href="https://github.com/turkyden/geek-resume/discussions/14"
               target="_blank"
               className="hover:underline"
             >
@@ -235,20 +237,20 @@ export default function IndexPage() {
         <div className="flex justify-center items-center">
           <a
             className="text-xl font-mono mx-2 transition-all font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-yellow-500 border-0 border-b border-dotted no-underline border-red-500 hover:opacity-80 hover:text-transparent"
-            href="https://github.com/turkyden/md-resume"
+            href="https://github.com/turkyden/geek-resume"
             target="_blank"
           >
             MD RESUME
           </a>
           {/* <a
             className="ml-4"
-            href="https://github.com/turkyden/md-resume"
+            href="https://github.com/turkyden/geek-resume"
             target="_blank"
           >
             <img
               className=""
               alt="GitHub Repo stars"
-              src="https://img.shields.io/github/stars/turkyden/md-resume?style=social"
+              src="https://img.shields.io/github/stars/turkyden/geek-resume?style=social"
             />
           </a> */}
         </div>
@@ -333,7 +335,7 @@ export default function IndexPage() {
               //const code2 = utils.decode(base64Str);
               console.log(
                 "encode",
-                `https://md-resume.vercel.app/?id=${base64Str}`
+                `https://geek-resume.vercel.app/?id=${base64Str}`
               );
               //console.log('decode', code2);
             }}
@@ -345,13 +347,13 @@ export default function IndexPage() {
           />
           <a
             className="ml-4"
-            href="https://github.com/turkyden/md-resume"
+            href="https://github.com/turkyden/geek-resume"
             target="_blank"
           >
             <img
               className=""
               alt="GitHub Repo stars"
-              src="https://img.shields.io/github/stars/turkyden/md-resume?style=social"
+              src="https://img.shields.io/github/stars/turkyden/geek-resume?style=social"
             />
           </a>
         </div>
@@ -367,6 +369,10 @@ export default function IndexPage() {
                   <>
                     <link
                       rel="stylesheet"
+                      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+                    />
+                    <link
+                      rel="stylesheet"
                       href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css"
                     />
                     <link
@@ -374,7 +380,6 @@ export default function IndexPage() {
                       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/utilities.css"
                     />
                     <style>{`
-                      *{ margin: 0 }
                       body{ overflow: hidden }
                       /* Rewrite tailwind css */
                       .bg-clip-text {

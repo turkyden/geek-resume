@@ -1,5 +1,5 @@
 {
-  "name": "md-resume",
+  "name": "geek-resume",
   "private": false,
   "scripts": {
     "start": "umi dev",
