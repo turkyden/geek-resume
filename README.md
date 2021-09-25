@@ -1,6 +1,6 @@
 English | [简体中文](./README_cn-zh.md)
 
-<h1 align="center">Markdown Resume</h1>
+<h1 align="center">Geek Resume</h1>
 
 <p align="center">💼 Pure Markdown, an online resume editor for developer.
 
