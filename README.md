@@ -6,9 +6,9 @@ English | [简体中文](./README_cn-zh.md)
 
 </p>
 
-![screenshot](https://cdn.jsdelivr.net/gh/turkyden/md-resume/screenshot.png)
+![screenshot](https://cdn.jsdelivr.net/gh/turkyden/geek-resume/screenshot.png)
 
-<p align="center"><a href="https://md-resume.vercel.app" target="_blank">: : : Live Demo : : :</a></p>
+<p align="center"><a href="https://geek-resume.vercel.app" target="_blank">: : : Live Demo : : :</a></p>
 
 > **Less is more**, the simple things often bring people more enjoyment.
 >
@@ -72,7 +72,7 @@ There are some nice works should be recommended here.
 
 Thanks goes to these people:
 
-![Contributors](https://contrib.rocks/image?repo=turkyden/md-resume)
+![Contributors](https://contrib.rocks/image?repo=turkyden/geek-resume)
 
 Please Feel free to enjoy and participate in open source!
 
@@ -80,7 +80,7 @@ Please Feel free to enjoy and participate in open source!
 
 Thanks for your star!
 
-[![Stargazers repo roster for @turkyden/md-resume](https://reporoster.com/stars/turkyden/md-resume)](https://github.com/turkyden/md-resume/stargazers)
+[![Stargazers repo roster for @turkyden/geek-resume](https://reporoster.com/stars/turkyden/geek-resume)](https://github.com/turkyden/geek-resume/stargazers)
 
 ## License
 
