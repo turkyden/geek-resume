@@ -9,6 +9,8 @@
 
 你好，我是廖晓娟，一个自驱型前端工程师，三年多大型复杂产品开发经验，负责蚂蚁集团 BI 产品 DeepInsight 的可视化建设，参与从图表库到 BI 产品力的一体化建设，对商业智能领域数据可视化建设有较为丰富的经验。
 
+<!-- My Social Links -->
+
 [![github](https://cdn.jsdelivr.net/gh/turkyden/md-resume/logo/social/github.png)](https://github.com/visiky)&nbsp;&nbsp;
 [![zhihu](https://cdn.jsdelivr.net/gh/turkyden/md-resume/logo/social/zhihu.png)](https://www.zhihu.com/people/visiky)&nbsp;&nbsp;
 [![segmentfault](https://cdn.jsdelivr.net/gh/turkyden/md-resume/logo/social/segmentfault.png)](https://segmentfault.com/)&nbsp;&nbsp;
@@ -18,6 +20,13 @@
 [![codepen](https://cdn.jsdelivr.net/gh/turkyden/md-resume/logo/social/codepen.png)](https://codepen.io/)&nbsp;&nbsp;
 [![codesandbox](https://cdn.jsdelivr.net/gh/turkyden/md-resume/logo/social/codesandbox.png)](https://codesandbox.io/)&nbsp;&nbsp;
 [![dribbble](https://cdn.jsdelivr.net/gh/turkyden/md-resume/logo/social/dribbble.png)](https://dribbble.com/)&nbsp;&nbsp;
+
+<!-- Your Tech Stack
+![Typescript](https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-ar21.svg)&nbsp;&nbsp;
+![React](https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg)&nbsp;&nbsp;
+![Nestjs](https://www.vectorlogo.zone/logos/nestjs/nestjs-ar21.svg)&nbsp;&nbsp;
+![Electron](https://www.vectorlogo.zone/logos/electronjs/electronjs-ar21.svg)&nbsp;&nbsp;
+-->
 
 ### 教育背景
 

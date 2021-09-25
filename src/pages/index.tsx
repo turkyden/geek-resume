@@ -13,8 +13,11 @@ import {
   InsertRowLeftOutlined,
   TableOutlined,
   PrinterOutlined,
+  QuestionOutlined,
+  ShareAltOutlined,
 } from "@ant-design/icons";
 import * as utils from "@/utils";
+import base64url from "base64url";
 
 import RESUME from "../../RESUME.md";
 
@@ -160,6 +163,66 @@ export default function IndexPage() {
     }
   }, []);
 
+  const quetion = useCallback((e: Event) => {
+    if (true) {
+      Modal.info({
+        title: <p className="text-center text-xl">Q & A</p>,
+        icon: null,
+        maskClosable: true,
+        centered: true,
+        okButtonProps: { hidden: true },
+        content: (
+          <div>
+            <p>Q: Can i write HTML and CSS ?</p>
+            <p className="text-gray-500">
+              A: Yeah, surported whole in markdown.
+            </p>
+            <p>Q: Surported TailwindCSS ?</p>
+            <p className="text-gray-500">
+              A: The version{" "}
+              <a
+                href="https://www.tailwindcss.cn/"
+                className="underline hover:underline"
+                target="_blank"
+              >
+                TailwindCSS@2.2.15
+              </a>
+              .
+            </p>
+            <p>Q: How to get the PDF ?</p>
+            <p className="text-gray-500">
+              A: With target printer in your browser like this. 👇
+            </p>
+            <div className="my-4 relative">
+              <img
+                className="shadow w-full"
+                src="/assets/screenshot_print.png"
+              />
+              <span className="absolute right-0 top-12 flex justify-center items-center h-6 w-6">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gradient-to-r from-red-400 to-yellow-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-gradient-to-r from-red-400 to-yellow-500"></span>
+              </span>
+            </div>
+            <a
+              href="https://github.com/turkyden/md-resume/discussions/14"
+              target="_blank"
+              className="hover:underline"
+            >
+              Discussions &rarr;
+            </a>
+            {/* <img
+              className="w-full"
+              src="https://watermark-pro.vercel.app/static/wechat.22a540b9.png"
+            /> */}
+          </div>
+        ),
+      });
+      setDonation("1");
+    } else {
+      utils.print(ref.current, "应聘岗位-求职者-联系方式.pdf");
+    }
+  }, []);
+
   return (
     <div
       className="w-screen h-screen overflow-hidden"
@@ -262,6 +325,19 @@ export default function IndexPage() {
           >
             <PictureOutlined className="cursor-pointer text-lg" />
           </Popover> */}
+          <ShareAltOutlined
+            title="Share your resume"
+            className="transition duration-1s ease-in-out hover:text-white cursor-pointer text-lg"
+            onClick={() => {
+              const base64Str = base64url.encode(code);
+              //const code2 = utils.decode(base64Str);
+              console.log(
+                "encode",
+                `https://md-resume.vercel.app/?id=${base64Str}`
+              );
+              //console.log('decode', code2);
+            }}
+          />
           <PrinterOutlined
             title="Export as PDF"
             className="transition duration-1s ease-in-out hover:text-white cursor-pointer text-lg"
@@ -293,9 +369,18 @@ export default function IndexPage() {
                       rel="stylesheet"
                       href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css"
                     />
+                    <link
+                      rel="stylesheet"
+                      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/utilities.css"
+                    />
                     <style>{`
                       *{ margin: 0 }
                       body{ overflow: hidden }
+                      /* Rewrite tailwind css */
+                      .bg-clip-text {
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                      }
                     `}</style>
                   </>
                 }
@@ -337,6 +422,16 @@ export default function IndexPage() {
           // }}
         />
       </MySplit>
+      <div className="text-white fixed bottom-10 right-10">
+        <Tooltip placement="topRight" title="Q & A 问题建议">
+          <div
+            className="cursor-pointer shadow-2xl animate-bounce bg-gradient-to-r from-red-400 to-yellow-500 rounded-full w-8 h-8 flex justify-center items-center"
+            onClick={quetion}
+          >
+            <QuestionOutlined />
+          </div>
+        </Tooltip>
+      </div>
     </div>
   );
 }

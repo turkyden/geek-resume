@@ -1,6 +1,7 @@
 import html2pdf from "html2pdf.js";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+import * as pako from "pako";
 
 /**
  * Print pdf with bowser
@@ -54,4 +55,16 @@ export function exportAsCanvasPDF(dom?: HTMLElement, filename?: string) {
     }
     pdf.save(filename);
   });
+}
+
+export function encode(str: string) {
+  return window.btoa(pako.gzip(str, { to: "string" }));
+}
+
+export function decode(encodedData: string) {
+  const decodedData = window.atob(encodedData);
+  const charData = decodedData.split("").map((v) => v.charCodeAt(0));
+  const binData = new Uint8Array(charData);
+  const data = pako.inflate(binData);
+  return String.fromCharCode.apply(null, new Uint16Array(data));
 }
