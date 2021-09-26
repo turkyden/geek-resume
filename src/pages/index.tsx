@@ -6,7 +6,7 @@ import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import { useLocalStorageState, useSessionStorageState } from "ahooks";
-import { Modal, Tooltip, Popover, Button, message } from "antd";
+import { Modal, Tooltip, Popover, Button, Input, Drawer, message } from "antd";
 import {
   PictureOutlined,
   InsertRowAboveOutlined,
@@ -15,6 +15,8 @@ import {
   PrinterOutlined,
   QuestionOutlined,
   ShareAltOutlined,
+  SkinOutlined,
+  TagOutlined,
 } from "@ant-design/icons";
 import * as utils from "@/utils";
 import base64url from "base64url";
@@ -93,11 +95,52 @@ export default function IndexPage() {
 
   // const [code, setCode] = useState(RESUME);
 
-  const [code, setCode] = useLocalStorageState("geek-resume-code", RESUME);
+  const [files, setFiles] = useLocalStorageState("geek-resume-files", [
+    {
+      id: new Date().getTime().toString(),
+      title: "default.md",
+      body: RESUME,
+    },
+  ]);
+
+  const [current, setCurrent] = useLocalStorageState(
+    "geek-resume-current",
+    files[0]
+  );
+
+  // useEffect(() => {
+  //   setCurrent(files[0]);
+  // }, [files])
 
   const [donation, setDonation] = useSessionStorageState("user-message", "0");
 
   const [direction, setDirection] = useState("horizontal");
+
+  const [visibleT, setVisibleT] = useState(false);
+
+  const [visibleH, setVisibleH] = useState(false);
+
+  const setCode = (code) => {
+    setCurrent({ ...current, body: code });
+    setFiles(
+      files.map((v) => {
+        return {
+          ...v,
+          body: v.id === current.id ? code : v.body,
+        };
+      })
+    );
+  };
+
+  const addNewResume = () => {
+    const newResume = {
+      id: new Date().getTime().toString(),
+      title: "Untitled Document.md",
+      body: RESUME,
+    };
+    setFiles([newResume].concat(files));
+    setCurrent(newResume);
+  };
 
   const print = useCallback((e: Event) => {
     if (true) {
@@ -327,19 +370,134 @@ export default function IndexPage() {
           >
             <PictureOutlined className="cursor-pointer text-lg" />
           </Popover> */}
-          <ShareAltOutlined
-            title="Share your resume"
+          <SkinOutlined
+            title="Theme"
             className="transition duration-1s ease-in-out hover:text-white cursor-pointer text-lg"
-            onClick={() => {
-              const base64Str = base64url.encode(code);
-              //const code2 = utils.decode(base64Str);
-              console.log(
-                "encode",
-                `https://geek-resume.vercel.app/?id=${base64Str}`
-              );
-              //console.log('decode', code2);
-            }}
+            onClick={setVisibleT.bind(this, true)}
           />
+
+          <TagOutlined
+            title="Version"
+            className="transition duration-1s ease-in-out hover:text-white cursor-pointer text-lg"
+            onClick={setVisibleH.bind(this, true)}
+          />
+          <Popover
+            placement="bottom"
+            title={null}
+            content={
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <img
+                    className="w-4 h-4"
+                    src="https://www.zhipin.com/favicon.ico"
+                    alt="Boss 直聘"
+                  />
+                  <a
+                    className="pl-2"
+                    href="https://www.zhipin.com/"
+                    target="_blank"
+                  >
+                    Boss 直聘
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <img
+                    className="w-4 h-4"
+                    src="https://www.lagou.com/favicon.ico"
+                    alt="拉勾网"
+                  />
+                  <a
+                    className="pl-2"
+                    href="https://www.lagou.com/"
+                    target="_blank"
+                  >
+                    拉勾网
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <img
+                    className="w-4 h-4"
+                    src="https://www.liepin.com/favicon.ico"
+                    alt="猎聘"
+                  />
+                  <a
+                    className="pl-2"
+                    href="https://www.liepin.com/"
+                    target="_blank"
+                  >
+                    猎聘
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <img
+                    className="w-4 h-4"
+                    src="https://www.zhaopin.com/favicon.ico"
+                    alt="智联招聘"
+                  />
+                  <a
+                    className="pl-2"
+                    href="https://www.zhaopin.com/"
+                    target="_blank"
+                  >
+                    智联招聘
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <img
+                    className="w-4 h-4"
+                    src="https://www.linkedin.com/favicon.ico"
+                    alt="领英"
+                  />
+                  <a
+                    className="pl-2"
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                  >
+                    领英
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <img
+                    className="w-4 h-4"
+                    src="https://maimai.cn/favicon.ico"
+                    alt="脉脉"
+                  />
+                  <a className="pl-2" href="https://maimai.cn/" target="_blank">
+                    脉脉
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <img
+                    className="w-4 h-4"
+                    src="https://www.nowcoder.com/favicon.ico"
+                    alt="牛客网"
+                  />
+                  <a
+                    className="pl-2"
+                    href="https://www.nowcoder.com/"
+                    target="_blank"
+                  >
+                    牛客网
+                  </a>
+                </div>
+              </div>
+            }
+            trigger="hover"
+          >
+            <ShareAltOutlined
+              title="Share your resume"
+              className="transition duration-1s ease-in-out hover:text-white cursor-pointer text-lg"
+              onClick={() => {
+                const base64Str = base64url.encode(code);
+                //const code2 = utils.decode(base64Str);
+                console.log(
+                  "encode",
+                  `https://geek-resume.vercel.app/?id=${base64Str}`
+                );
+                //console.log('decode', code2);
+              }}
+            />
+          </Popover>
           <PrinterOutlined
             title="Export as PDF"
             className="transition duration-1s ease-in-out hover:text-white cursor-pointer text-lg"
@@ -400,7 +558,7 @@ export default function IndexPage() {
                     ),
                   }}
                 >
-                  {code}
+                  {current.body}
                 </ReactMarkdown>
               </Frame>
             </div>
@@ -411,7 +569,7 @@ export default function IndexPage() {
           height="calc(100% - 0px)"
           defaultLanguage="markdown"
           theme="vs-dark"
-          value={code}
+          value={current.body}
           onChange={setCode}
           // onMount={(editor, monaco) => {
           //   console.log(editor, monaco);
@@ -436,6 +594,106 @@ export default function IndexPage() {
             <QuestionOutlined />
           </div>
         </Tooltip>
+      </div>
+      <Drawer
+        title="热门模板"
+        placement="right"
+        width={450}
+        closable={false}
+        onClose={setVisibleT.bind(this, false)}
+        visible={visibleT}
+      >
+        <div>
+          <div className="flex space-x-4">
+            <div className="" onClick={addNewResume}>
+              <img
+                className="cursor-pointer transition duration-500 ease-in-out w-48 h-64 shadow border border-solid border-gray-200 hover:border-yellow-500"
+                src="/assets/themes/github-light.png"
+                alt=""
+              />
+              <p className="text-center pt-2">Github Light</p>
+            </div>
+            {/* <div className="" onClick={addNewResume}>
+              <div className="cursor-pointer w-48 h-64 transition duration-500 ease-in-out border-3 border-dotted border-gray-300 flex flex-col justify-center items-center rounded">
+                <div className="text-4xl text-gray-300">+</div>
+              </div>
+              <p className="text-center pt-2">New Resume</p>
+            </div> */}
+          </div>
+        </div>
+      </Drawer>
+
+      <Drawer
+        title="历史记录"
+        placement="right"
+        width={450}
+        closable={false}
+        onClose={setVisibleH.bind(this, false)}
+        visible={visibleH}
+      >
+        <div className="flex flex-wrap py-4">
+          {files.map((v) => (
+            <div key={v.id} className="w-1/2 px-1 relative">
+              <Placeholder
+                className={v.id === current.id ? "border-yellow-500" : ""}
+                onClick={() => {
+                  setCurrent(files.find((a) => a.id === v.id));
+                }}
+              />
+              <div className="pt-2 pb-4">
+                <Input
+                  className="w-full"
+                  type="text"
+                  value={v.title}
+                  bordered={false}
+                />
+              </div>
+              {files.length > 1 && (
+                <div
+                  className="shadow px-2 rounded-full absolute -top-4 -right-2 text-gray-500 cursor-pointer border border-solid border-gray-200 bg-white z-50"
+                  onClick={() => {
+                    const resFiles = files.filter((a) => a.id !== v.id);
+                    const isCurrent = current.id === v.id;
+                    isCurrent && setCurrent({ ...resFiles[0] });
+                    setFiles(resFiles);
+                  }}
+                >
+                  x
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </Drawer>
+    </div>
+  );
+}
+
+function Placeholder({ className, ...props }: { className: string }) {
+  return (
+    <div
+      className={`w-48 h-64 shadow border border-solid border-gray-200 hover:border-yellow-500 p-4 ${className}`}
+      {...props}
+    >
+      <div className="flex justify-between mb-4">
+        <div className="space-y-2">
+          <div className="w-8 h-2 bg-gray-200"></div>
+          <div className="w-12 h-2 bg-gray-200"></div>
+          <div className="w-20 h-2 bg-gray-200"></div>
+        </div>
+        <div className="w-10 h-10 rounded-full bg-gray-200" />
+      </div>
+      <div className="space-y-2">
+        <div className="w-36 h-2 bg-gray-200"></div>
+        <div className="w-36 h-2 bg-gray-200"></div>
+        <div className="w-28 h-2 bg-gray-200"></div>
+        <div className="w-36 h-2 bg-gray-200"></div>
+        <div className="w-36 h-2 bg-gray-200"></div>
+        <div className="w-28 h-2 bg-gray-200"></div>
+        <div className="w-36 h-2 bg-gray-200"></div>
+        <div className="w-14 h-2 bg-gray-200"></div>
+        <div className="w-36 h-2 bg-gray-200"></div>
+        <div className="w-36 h-2 bg-gray-200"></div>
       </div>
     </div>
   );

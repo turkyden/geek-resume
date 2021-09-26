@@ -82,6 +82,12 @@ Thanks for your star!
 
 [![Stargazers repo roster for @turkyden/geek-resume](https://reporoster.com/stars/turkyden/geek-resume)](https://github.com/turkyden/geek-resume/stargazers)
 
+## CDN
+
+refresh cdn cache
+
+https://purge.jsdelivr.net/gh/turkyden/geek-resume@gh-pages/
+
 ## License
 
 [MIT](./LICENSE)
