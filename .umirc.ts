@@ -4,6 +4,7 @@ export default defineConfig({
   title: "Geek Resume - Pure Markdown, an online resume editor for developer.",
   // ssr: {},
   // exportStatic: {},
+  hash: true,
   runtimePublicPath: true,
   publicPath:
     process.env.NODE_ENV === "production"
