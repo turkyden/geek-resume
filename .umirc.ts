@@ -1,7 +1,17 @@
 import { defineConfig } from "umi";
 
 export default defineConfig({
-  title: "Geek Resume - Pure Markdown, an online resume editor for developer.",
+  title: "Geek Resume - 纯 Markdown，一套专为开发者量身定制的优雅简历模板",
+  metas: [
+    {
+      name: "keywords",
+      content: "程序员简历, 前端工程师简历, Markdown",
+    },
+    {
+      name: "description",
+      content: "纯 Markdown，一套专为开发者量身定制的优雅简历模板",
+    },
+  ],
   // ssr: {},
   // exportStatic: {},
   hash: true,
