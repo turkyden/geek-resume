@@ -292,11 +292,11 @@ export default function IndexPage() {
       >
         <div className="flex justify-center items-center">
           <a
-            className="text-xl font-mono mx-2 transition-all font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-yellow-500 border-0 border-b border-dotted no-underline border-red-500 hover:opacity-80 hover:text-transparent"
+            className="text-xl font-mono mx-2 transition-all font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-yellow-500 border-0 border-b border-dotted no-underline border-red-500 hover:opacity-90 hover:text-transparent"
             href="https://github.com/turkyden/geek-resume"
             target="_blank"
           >
-            GEEK RESUME 极简
+            GEEK RESUME
           </a>
           {/* <a
             className="ml-4"
@@ -500,15 +500,15 @@ export default function IndexPage() {
             <ShareAltOutlined
               title="Share your resume"
               className="transition duration-1s ease-in-out hover:text-white cursor-pointer text-lg"
-              onClick={() => {
-                const base64Str = base64url.encode(code);
-                //const code2 = utils.decode(base64Str);
-                console.log(
-                  "encode",
-                  `https://geek-resume.vercel.app/?id=${base64Str}`
-                );
-                //console.log('decode', code2);
-              }}
+              // onClick={() => {
+              //   const base64Str = base64url.encode(code);
+              //   const code2 = utils.decode(base64Str);
+              //   console.log(
+              //     "encode",
+              //     `https://geek-resume.vercel.app/?id=${base64Str}`
+              //   );
+              //   console.log('decode', code2);
+              // }}
             />
           </Popover>
           <PrinterOutlined
@@ -656,6 +656,7 @@ export default function IndexPage() {
               <div className="pt-2 pb-4">
                 <Input
                   className="w-full"
+                  style={{ paddingLeft: 0, paddingRight: 0 }}
                   type="text"
                   value={v.title}
                   bordered={false}
