@@ -5,6 +5,9 @@ export default defineConfig({
   // ssr: {},
   // exportStatic: {},
   hash: true,
+  analytics: {
+    baidu: "9ac0124fa09ddf2c6f1edcd0ca3c6330",
+  },
   runtimePublicPath: true,
   publicPath:
     process.env.NODE_ENV === "production"
