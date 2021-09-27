@@ -132,6 +132,19 @@ export default function IndexPage() {
     );
   };
 
+  const onChangeTitle = (e: Event) => {
+    const title = e.target.value;
+    setCurrent({ ...current, title });
+    setFiles(
+      files.map((v) => {
+        return {
+          ...v,
+          title: v.id === current.id ? title : v.title,
+        };
+      })
+    );
+  };
+
   const addNewResume = () => {
     const newResume = {
       id: new Date().getTime().toString(),
@@ -598,13 +611,13 @@ export default function IndexPage() {
       <Drawer
         title="热门模板"
         placement="right"
-        width={450}
+        width={240}
         closable={false}
         onClose={setVisibleT.bind(this, false)}
         visible={visibleT}
       >
         <div>
-          <div className="flex space-x-4">
+          <div className="space-x-4">
             <div className="" onClick={addNewResume}>
               <img
                 className="cursor-pointer transition duration-500 ease-in-out w-48 h-64 shadow border border-solid border-gray-200 hover:border-yellow-500"
@@ -626,14 +639,14 @@ export default function IndexPage() {
       <Drawer
         title="历史记录"
         placement="right"
-        width={450}
+        width={250}
         closable={false}
         onClose={setVisibleH.bind(this, false)}
         visible={visibleH}
       >
-        <div className="flex flex-wrap py-4">
+        <div className="py-4">
           {files.map((v) => (
-            <div key={v.id} className="w-1/2 px-1 relative">
+            <div key={v.id} className="px-1 relative">
               <Placeholder
                 className={v.id === current.id ? "border-yellow-500" : ""}
                 onClick={() => {
@@ -646,11 +659,12 @@ export default function IndexPage() {
                   type="text"
                   value={v.title}
                   bordered={false}
+                  onChange={onChangeTitle}
                 />
               </div>
               {files.length > 1 && (
                 <div
-                  className="shadow px-2 rounded-full absolute -top-4 -right-2 text-gray-500 cursor-pointer border border-solid border-gray-200 bg-white z-50"
+                  className="shadow px-2 rounded-full absolute -top-4 -right-4 text-gray-500 cursor-pointer border border-solid border-gray-200 bg-white z-50"
                   onClick={() => {
                     const resFiles = files.filter((a) => a.id !== v.id);
                     const isCurrent = current.id === v.id;

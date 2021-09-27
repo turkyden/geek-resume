@@ -84,9 +84,7 @@ Thanks for your star!
 
 ## CDN
 
-refresh cdn cache
-
-https://purge.jsdelivr.net/gh/turkyden/geek-resume@gh-pages/
+[Click me to refresh cdn cache &rarr;](https://purge.jsdelivr.net/gh/turkyden/geek-resume@gh-pages/)
 
 ## License
 
