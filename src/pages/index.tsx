@@ -505,7 +505,7 @@ export default function IndexPage() {
               //   const code2 = utils.decode(base64Str);
               //   console.log(
               //     "encode",
-              //     `https://geek-resume.vercel.app/?id=${base64Str}`
+              //     `https://jijian.turkyden.com/?id=${base64Str}`
               //   );
               //   console.log('decode', code2);
               // }}

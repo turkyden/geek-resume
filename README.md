@@ -8,7 +8,7 @@ English | [简体中文](./README_cn-zh.md)
 
 ![screenshot](https://cdn.jsdelivr.net/gh/turkyden/geek-resume/screenshot.png)
 
-<p align="center"><a href="https://geek-resume.vercel.app" target="_blank">: : : Live Demo : : :</a></p>
+<p align="center"><a href="https://jijian.turkyden.com" target="_blank">: : : Live Demo : : :</a></p>
 
 > **Less is more**, the simple things often bring people more enjoyment.
 >
